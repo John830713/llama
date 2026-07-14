@@ -83,9 +83,22 @@ D:\llama\
 
 | 工具 | 位置 | 用途 |
 |------|------|------|
+| ask.ps1 | `resources/tools/` | 本地模型 API（腳本生成、翻譯、摘要） |
 | update-llama.ps1 | `resources/tools/` | 更新 llama.cpp 二進位 |
 | update-llama.bat | 根目錄 + `resources/tools/` | 雙擊執行入口 |
 | D:\llama_Models.bat | D:\ 根目錄 | 啟動 server + Interpreter |
+
+### Token 節省流程
+
+簡單任務可丟給本地模型，我只負責檢查與修正：
+
+```powershell
+# 1. 本地模型寫腳本
+powershell -File D:\llama\tools\ask.ps1 -Prompt "寫一個 xxx 腳本" -System "Output raw code only"
+
+# 2. 我檢查修正
+# 3. 執行驗證
+```
 
 ---
 
