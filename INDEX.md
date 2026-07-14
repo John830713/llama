@@ -15,7 +15,7 @@ D:\llama\
 ├── update-llama.ps1      # 更新腳本
 ├── version.txt           # 目前版本 (gitignored)
 ├── bin\                  # llama 二進位 (gitignored)
-├── Models\               # GGUF 模型 (gitignored)
+├── D:\Models\             # GGUF 模型（gitignored，外部目錄）
 ├── resources\            # 專案文件（進 git）
 └── .agent\               # Runtime 資料 (gitignored)
 ```
@@ -23,5 +23,5 @@ D:\llama\
 ## 快速開始
 
 1. `update-llama.bat` — 下載最新 llama.cpp
-2. 放 GGUF 模型到 `Models/`
+2. 放 GGUF 模型到 `D:\Models\`
 3. `D:\llama_Models.bat` — 啟動 server

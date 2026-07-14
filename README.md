@@ -50,7 +50,7 @@ response = client.chat.completions.create(
 ```
 D:\llama\
 ├── bin\              # llama 二進位（gitignored，由 update-llama 管理）
-├── Models\           # GGUF 模型（gitignored）
+├── D:\Models\         # GGUF 模型（gitignored，外部目錄）
 ├── resources\        # 文件與腳本（進 git）
 │   ├── reference/    # 參數規格
 │   ├── skills/       # 操作指引
