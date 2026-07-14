@@ -8,7 +8,7 @@ echo Starting llama-server...
 start "llama_server" D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host %HOST% --port %PORT% -ngl 10 -c 4096
 
 echo Waiting for server...
-timeout /t 3 /nobreak >nul
+timeout /t 5 /nobreak >nul
 
 echo.
 echo === Model List ===

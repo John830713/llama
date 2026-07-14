@@ -25,7 +25,7 @@ powershell -ExecutionPolicy Bypass -File D:\llama\update-llama.ps1
 
 ```powershell
 # Router 模式（自動掃描 Models 目錄）
-D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 8080 -ngl 10 -c 4096
+D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 9090 -ngl 10 -c 4096
 
 # 或用 bat 自動排版
 D:\llama_Models.bat
@@ -38,7 +38,7 @@ Server 啟動後提供 OpenAI 相容 API：
 ```python
 from openai import OpenAI
 
-client = OpenAI(base_url="http://127.0.0.1:8080/v1", api_key="none")
+client = OpenAI(base_url="http://127.0.0.1:9090/v1", api_key="none")
 response = client.chat.completions.create(
     model="qwen",
     messages=[{"role": "user", "content": "你好"}]

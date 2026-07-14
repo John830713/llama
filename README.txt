@@ -4,25 +4,25 @@
   D:\llama\update-llama.bat
 
 ## 啟動 server
-  D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 8080 -ngl 10 -c 4096
+  D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 9090 -ngl 10 -c 4096
 
 ## 啟動（自動排版）
   D:\llama_Models.bat
 
 ## 健康檢查
-  curl http://127.0.0.1:8080/health
+  curl http://127.0.0.1:9090/health
 
 ## 列出模型
-  curl http://127.0.0.1:8080/v1/models
+  curl http://127.0.0.1:9090/v1/models
 
 ## Chat API
-  curl http://127.0.0.1:8080/v1/chat/completions -H "Content-Type: application/json" -d "{\"model\":\"qwen\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}"
+  curl http://127.0.0.1:9090/v1/chat/completions -H "Content-Type: application/json" -d "{\"model\":\"qwen\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}"
 
 ## 查看版本
   type D:\llama\version.txt
 
 ## Port 衝突
-  netstat -ano | findstr :8080
+  netstat -ano | findstr :9090
   換 port: --port 8081
 
 ## 模型放置

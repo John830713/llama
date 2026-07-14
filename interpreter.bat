@@ -2,11 +2,11 @@
 chcp 65001 >nul
 setlocal
 
-set "MODEL=D:\Models\Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf"
+set "MODEL=D:\Models\Gemma-4-Q4_K_M.gguf"
 
 echo ============================================
 echo   llama.cpp Interpreter
-echo   Model: %MODEL%
+echo   Model: Gemma-4
 echo   Type /exit to quit
 echo ============================================
 echo.

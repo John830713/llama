@@ -43,13 +43,13 @@
 D:\llama\update-llama.bat
 
 # 啟動 server（Router 模式）
-D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 8080 -ngl 10 -c 4096
+D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 9090 -ngl 10 -c 4096
 
 # 啟動 server（bat 自動排版）
 D:\llama_Models.bat
 
 # 健康檢查
-curl http://127.0.0.1:8080/health
+curl http://127.0.0.1:9090/health
 
 # 查看已安裝版本
 Get-Content D:\llama\version.txt

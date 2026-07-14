@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory=$true)]
     [string]$Prompt,
     [string]$System = "",
-    [string]$Model = "Qwen2.5-VL-7B-Instruct-Q4_K_M",
+    [string]$Model = "Gemma-4-Q4_K_M",
     [string]$Server = "http://127.0.0.1:9090",
     [int]$MaxTokens = 2048,
     [float]$Temperature = 0.3,
