@@ -18,8 +18,10 @@ resources/
 │   └── server.md         # llama-server 啟動與 API
 └── tools/                # 系統工具
     ├── INDEX.md
-    ├── ask/              # 本地模型 API
-    └── update-llama/     # 更新腳本
+    ├── common/           # 跨專案通用
+    │   └── ask/          # 本地模型 API
+    └── local/            # 本機限定
+        └── update-llama/ # 更新腳本
 ```
 
 ## 查找
@@ -29,8 +31,8 @@ resources/
 | llama-server 參數怎麼下 | `reference/spec.md` |
 | 怎麼更新到最新版 | `skills/update.md` |
 | 怎麼啟動 server / 用 API | `skills/server.md` |
-| 更新腳本原始碼 | `tools/update-llama/` |
-| 本地模型 API 用法 | `tools/ask/` |
+| 更新腳本原始碼 | `tools/local/update-llama/` |
+| 本地模型 API 用法 | `tools/common/ask/` |
 
 ## Forward links
 
