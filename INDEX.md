@@ -20,16 +20,6 @@ D:\llama\
 └── .agent\               # Runtime 資料 (gitignored)
 ```
 
-## Forward links
-
-| Path | Description |
-|------|-------------|
-| [resources/](resources/INDEX.md) | Project resources — reference, skills, tools |
-
-## Referenced by
-
-- *(Root node — entry point for this project's INDEX chain)*
-
 ## 快速開始
 
 1. `update-llama.bat` — 下載最新 llama.cpp

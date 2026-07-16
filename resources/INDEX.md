@@ -28,15 +28,3 @@ resources/
 | 怎麼更新到最新版 | `skills/update.md` |
 | 怎麼啟動 server / 用 API | `skills/server.md` |
 | 更新腳本原始碼 | `tools/update-llama.ps1` |
-
-## Forward links
-
-| Path | Description |
-|------|-------------|
-| [reference/](reference/INDEX.md) | Design reference — params, model formats, CUDA versions |
-| [skills/](skills/INDEX.md) | Operation guides — update, server, API |
-| [tools/](tools/INDEX.md) | Project tools — update scripts, ask.ps1 |
-
-## Referenced by
-
-- [INDEX.md](../INDEX.md)

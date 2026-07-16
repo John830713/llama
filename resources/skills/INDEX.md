@@ -6,7 +6,3 @@
 |------|------|
 | [update.md](update.md) | 更新 llama.cpp 到最新版 |
 | [server.md](server.md) | 啟動 llama-server、API 用法 |
-
-## Referenced by
-
-- [resources/INDEX.md](../INDEX.md)
