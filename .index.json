@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "forward": ["resources/"],
+  "referenced_by": []
+}
