@@ -13,4 +13,4 @@
 
 ## Referenced by
 
-- [tools/INDEX.md](../INDEX.md)
+- [local/INDEX.md](../INDEX.md)

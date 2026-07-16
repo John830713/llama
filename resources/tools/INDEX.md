@@ -6,33 +6,30 @@
 
 ```
 tools/
-├── INDEX.md              # 本檔案
-├── ask/                  # 本地模型 API
+├── INDEX.md
+├── common/              # 跨專案通用工具
 │   ├── INDEX.md
-│   ├── spec.md
-│   ├── usage.md
-│   └── ask.ps1
-└── update-llama/         # llama.cpp 更新
+│   └── ask/             # 本地模型 API
+│       ├── INDEX.md
+│       ├── ask.ps1
+│       ├── spec.md
+│       └── usage.md
+└── local/               # 本機限定工具
     ├── INDEX.md
-    ├── spec.md
-    ├── usage.md
-    ├── update-llama.ps1
-    └── update-llama.bat
+    └── update-llama/    # llama.cpp 更新
+        ├── INDEX.md
+        ├── update-llama.ps1
+        ├── update-llama.bat
+        ├── spec.md
+        └── usage.md
 ```
-
-## 工具清單
-
-| 工具 | 用途 | 說明 |
-|------|------|------|
-| [ask](ask/) | 本地模型 API | 腳本生成、翻譯、摘要 |
-| [update-llama](update-llama/) | 更新 llama.cpp | 自動下載最新二進位 |
 
 ## Forward links
 
 | Path | Description |
 |------|-------------|
-| [ask/](ask/INDEX.md) | 本地模型 API |
-| [update-llama/](update-llama/INDEX.md) | llama.cpp 更新 |
+| [common/](common/INDEX.md) | 跨專案通用工具 |
+| [local/](local/INDEX.md) | 本機限定工具 |
 
 ## Referenced by
 

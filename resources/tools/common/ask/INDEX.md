@@ -12,4 +12,4 @@
 
 ## Referenced by
 
-- [tools/INDEX.md](../INDEX.md)
+- [common/INDEX.md](../INDEX.md)

@@ -31,8 +31,8 @@
 | 更新 llama.cpp | `resources/skills/update.md` 或雙擊 `update-llama.bat` |
 | 啟動 server / API 用法 | `resources/skills/server.md` |
 | 參數規格、模型格式 | `resources/reference/spec.md` |
-| 更新腳本原始碼 | `resources/tools/update-llama/` |
-| 本地模型 API | `resources/tools/ask/` |
+| 更新腳本原始碼 | `resources/tools/local/update-llama/` |
+| 本地模型 API | `resources/tools/common/ask/` |
 | 新機台環境建置 | `resources/reference/spec.md`（CUDA 版本對照） |
 
 ---
@@ -84,9 +84,9 @@ D:\llama\
 
 | 工具 | 位置 | 用途 |
 |------|------|------|
-| ask.ps1 | `resources/tools/ask/` | 本地模型 API（腳本生成、翻譯、摘要） |
-| update-llama.ps1 | `resources/tools/update-llama/` | 更新 llama.cpp 二進位 |
-| update-llama.bat | 根目錄 + `resources/tools/update-llama/` | 雙擊執行入口 |
+| ask.ps1 | `resources/tools/common/ask/` | 本地模型 API（腳本生成、翻譯、摘要） |
+| update-llama.ps1 | `resources/tools/local/update-llama/` | 更新 llama.cpp 二進位 |
+| update-llama.bat | 根目錄 + `resources/tools/local/update-llama/` | 雙擊執行入口 |
 | D:\llama_Models.bat | D:\ 根目錄 | 啟動 server + Interpreter |
 
 ### Token 節省流程
@@ -95,7 +95,7 @@ D:\llama\
 
 ```powershell
 # 1. 本地模型寫腳本
-powershell -File D:\llama\resources\tools\ask\ask.ps1 -Prompt "寫一個 xxx 腳本" -System "Output raw code only"
+powershell -File D:\llama\resources\tools\common\ask\ask.ps1 -Prompt "寫一個 xxx 腳本" -System "Output raw code only"
 
 # 2. 我檢查修正
 # 3. 執行驗證
