@@ -2,12 +2,14 @@
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
     "AGENTS.md",
-    "README.md"
+    "README.md",
+    "C:\\Users\\John\\.config/opencode/mneme-memory.md",
+    "結論/總結用繁體中文回答；中間推理過程可用英文；程式碼註解全部用英文。"
   ],
   "mcp": {
     "mneme": {
       "command": [
-        "C:\\Users\\John\\AppData\\Local\\Programs\\mneme\\mneme.exe",
+        "D:\\Agent\\resources\\tools\\common\\mneme\\mneme.exe",
         "run"
       ],
       "enabled": true,
