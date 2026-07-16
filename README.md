@@ -16,7 +16,7 @@ llama.cpp Windows 本地部署，自動更新 + 模型管理。
 D:\llama\update-llama.bat
 
 # 方法 2：PowerShell
-powershell -ExecutionPolicy Bypass -File D:\llama\update-llama.ps1
+powershell -ExecutionPolicy Bypass -File D:\llama\resources\tools\local\update-llama\update-llama.ps1
 ```
 
 腳本自動檢查 GitHub 最新版，下載到 `D:\Temp\Zip`，解壓到 `D:\llama\bin\`。
@@ -50,11 +50,12 @@ response = client.chat.completions.create(
 ```
 D:\llama\
 ├── bin\              # llama 二進位（gitignored，由 update-llama 管理）
-├── D:\Models\         # GGUF 模型（gitignored，外部目錄）
 ├── resources\        # 文件與腳本（進 git）
 │   ├── reference/    # 參數規格
 │   ├── skills/       # 操作指引
-│   └── tools/        # 更新腳本
+│   └── tools/        # 系統工具
+│       ├── common/   # 跨專案通用（ask）
+│       └── local/    # 本機限定（update-llama）
 ├── update-llama.bat  # 更新入口
 ├── version.txt       # 目前版本
 └── .agent\           # Runtime 資料（gitignored）
