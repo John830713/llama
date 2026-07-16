@@ -2,7 +2,7 @@ param(
     [string]$Dest = "D:\llama",
     [string]$ZipDir = "D:\Temp\Zip",
     [string]$AssetPattern1 = "cudart-llama-bin-win-cuda-13.3-x64.zip",
-    [string]$AssetPattern2 = "llama-b9994-bin-win-cuda-13.3-x64.zip"
+    [string]$AssetPattern2 = "llama-b\d+-bin-win-cuda-13.3-x64.zip"
 )
 
 $ErrorActionPreference = "Stop"
@@ -39,16 +39,19 @@ if (-not (Test-Path $ZipDir)) { New-Item -ItemType Directory -Path $ZipDir -Forc
 
 # 4. 逐一下載
 $assets = @($AssetPattern1, $AssetPattern2)
-foreach ($name in $assets) {
+$zipPaths = @()
+foreach ($pattern in $assets) {
+    $asset = $release.assets | Where-Object { $_.name -match "^$pattern$" } | Select-Object -First 1
+    if (-not $asset) {
+        Write-Error "Asset matching '$pattern' not found in release $tag"
+        exit 1
+    }
+    $name = $asset.name
     $zipPath = Join-Path $ZipDir $name
+    $zipPaths += $zipPath
     if (Test-Path $zipPath) {
         Write-Host "Already downloaded: $name"
     } else {
-        $asset = $release.assets | Where-Object { $_.name -eq $name } | Select-Object -First 1
-        if (-not $asset) {
-            Write-Error "Asset '$name' not found in release $tag"
-            exit 1
-        }
         Write-Host "Downloading $name ($([math]::Round($asset.size/1MB,1)) MB)..."
         Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zipPath -Headers @{Accept = "application/octet-stream"}
     }
@@ -58,9 +61,8 @@ foreach ($name in $assets) {
 $binDir = Join-Path $Dest "bin"
 if (Test-Path $binDir) { Remove-Item $binDir -Recurse -Force }
 
-foreach ($name in $assets) {
-    $zipPath = Join-Path $ZipDir $name
-    Write-Host "Extracting $name..."
+foreach ($zipPath in $zipPaths) {
+    Write-Host "Extracting $(Split-Path $zipPath -Leaf)..."
     Expand-Archive -Path $zipPath -DestinationPath $binDir -Force
 }
 
