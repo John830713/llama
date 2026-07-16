@@ -1,5 +1,7 @@
 # models — 模型參考
 
-| 檔案 | 內容 |
-|------|------|
-| [INDEX.md](INDEX.md) | 本目錄說明 |
+GGUF 模型格式、量化等級、VRAM 估算。
+
+## Referenced by
+
+- [reference/INDEX.md](../INDEX.md)

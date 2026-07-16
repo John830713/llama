@@ -26,3 +26,14 @@ tools/
 |------|------|------|
 | [ask](ask/) | 本地模型 API | 腳本生成、翻譯、摘要 |
 | [update-llama](update-llama/) | 更新 llama.cpp | 自動下載最新二進位 |
+
+## Forward links
+
+| Path | Description |
+|------|-------------|
+| [ask/](ask/INDEX.md) | 本地模型 API |
+| [update-llama/](update-llama/INDEX.md) | llama.cpp 更新 |
+
+## Referenced by
+
+- [resources/INDEX.md](../INDEX.md)

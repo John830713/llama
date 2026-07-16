@@ -1,5 +1,7 @@
 # server — Server 參考
 
-| 檔案 | 內容 |
-|------|------|
-| [INDEX.md](INDEX.md) | 本目錄說明 |
+llama-server 啟動參數與 API 端點。
+
+## Referenced by
+
+- [reference/INDEX.md](../INDEX.md)

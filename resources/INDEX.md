@@ -31,3 +31,15 @@ resources/
 | 怎麼啟動 server / 用 API | `skills/server.md` |
 | 更新腳本原始碼 | `tools/update-llama/` |
 | 本地模型 API 用法 | `tools/ask/` |
+
+## Forward links
+
+| Path | Description |
+|------|-------------|
+| [reference/](reference/INDEX.md) | 設計參考 |
+| [skills/](skills/INDEX.md) | 操作指引 |
+| [tools/](tools/INDEX.md) | 系統工具 |
+
+## Referenced by
+
+- [INDEX.md](../INDEX.md)

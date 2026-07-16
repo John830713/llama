@@ -6,7 +6,10 @@
 
 | 檔案 | 說明 |
 |------|------|
-| [INDEX.md](INDEX.md) | 本檔案 |
 | [spec.md](spec.md) | 參數規格 |
 | [usage.md](usage.md) | 使用範例 |
 | [ask.ps1](ask.ps1) | 主腳本 |
+
+## Referenced by
+
+- [tools/INDEX.md](../INDEX.md)

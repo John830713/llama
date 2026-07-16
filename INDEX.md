@@ -25,3 +25,13 @@ D:\llama\
 1. `update-llama.bat` — 下載最新 llama.cpp
 2. 放 GGUF 模型到 `D:\Models\`
 3. `D:\llama_Models.bat` — 啟動 server
+
+## Forward links
+
+| Path | Description |
+|------|-------------|
+| [resources/](resources/INDEX.md) | 專案文件與工具 |
+
+## Referenced by
+
+- *(Root node — entry point for this project's INDEX chain)*
