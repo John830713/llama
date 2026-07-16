@@ -7,7 +7,7 @@
 自動掃描 Models 目錄，按需載入模型：
 
 ```powershell
-D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 9090 -ngl 10 -c 4096
+D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 8080 -ngl 10 -c 4096
 ```
 
 ### 單模型模式
@@ -15,7 +15,7 @@ D:\llama\bin\llama-server.exe --models-dir "D:\Models" --host 127.0.0.1 --port 9
 直接載入指定模型：
 
 ```powershell
-D:\llama\bin\llama-server.exe --model "D:\Models\Gemma-4-Q4_K_M.gguf" --host 127.0.0.1 --port 9090 -ngl 10 -c 4096
+D:\llama\bin\llama-server.exe --model "D:\Models\Gemma-4-Q4_K_M.gguf" --host 127.0.0.1 --port 8080 -ngl 10 -c 4096
 ```
 
 ## 用 bat 啟動
@@ -31,19 +31,19 @@ D:\llama\bin\llama-server.exe --model "D:\Models\Gemma-4-Q4_K_M.gguf" --host 127
 ### 健康檢查
 
 ```bash
-curl.exe -s http://127.0.0.1:9090/health
+curl.exe -s http://127.0.0.1:8080/health
 ```
 
 ### 列出模型
 
 ```bash
-curl.exe -s http://127.0.0.1:9090/v1/models
+curl.exe -s http://127.0.0.1:8080/v1/models
 ```
 
 ### Chat API（OpenAI 相容）
 
 ```bash
-curl.exe -s http://127.0.0.1:9090/v1/chat/completions ^
+curl.exe -s http://127.0.0.1:8080/v1/chat/completions ^
   -H "Content-Type: application/json" ^
   -d "{\"model\":\"Gemma-4-Q4_K_M\",\"messages\":[{\"role\":\"user\",\"content\":\"hello\"}]}"
 ```
@@ -53,7 +53,7 @@ curl.exe -s http://127.0.0.1:9090/v1/chat/completions ^
 ```python
 from openai import OpenAI
 
-client = OpenAI(base_url="http://127.0.0.1:9090/v1", api_key="none")
+client = OpenAI(base_url="http://127.0.0.1:8080/v1", api_key="none")
 response = client.chat.completions.create(
     model="Gemma-4-Q4_K_M",
     messages=[{"role": "user", "content": "你好"}]
@@ -64,7 +64,7 @@ print(response.choices[0].message.content)
 ## Port 衝突處理
 
 如果遇到 `couldn't bind HTTP server socket`：
-1. 確認 port 沒被佔用：`netstat -ano | findstr :9090`
+1. 確認 port 沒被佔用：`netstat -ano | findstr :8080`
 2. 換個 port：`--port 8888` 或 `--port 7860`
 3. 注意：port 8074-8173 被 Hyper-V/WSL 保留，不可用
 

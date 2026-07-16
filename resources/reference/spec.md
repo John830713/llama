@@ -7,7 +7,7 @@
 | `--model` | 指定單一模型路徑 | `--model D:\Models\qwen.gguf` |
 | `--models-dir` | 模型目錄（自動掃描 .gguf） | `--models-dir D:\Models` |
 | `--host` | 監聽地址 | `--host 127.0.0.1` |
-| `--port` | 監聽 port | `--port 9090` |
+| `--port` | 監聽 port | `--port 8080` |
 | `-ngl` | GPU offload 層數 | `-ngl 10`（越大越吃 VRAM） |
 | `-c` | context window size | `-c 4096` |
 | `-t` | 執行緒數 | `-t 4` |

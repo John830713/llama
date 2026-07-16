@@ -4,7 +4,7 @@
 
 ## 流程
 
-1. 確認 server 在 port 9090 運行
+1. 確認 server 在 port 8080 運行
 2. 呼叫 `D:\llama\resources\tools\ask\ask.ps1`
 3. 顯示結果
 

@@ -2,15 +2,13 @@
 chcp 65001 >nul
 setlocal
 
-set "MODEL=D:\Models\Gemma-4-Q4_K_M.gguf"
-
 echo ============================================
-echo   llama.cpp Interpreter
-echo   Model: Gemma-4
-echo   Type /exit to quit
+echo   llama.cpp Interpreter (via open-interpreter)
+echo   Server: http://127.0.0.1:8080/v1
+echo   Model: Gemma-4-Q4_K_M
 echo ============================================
 echo.
 
-D:\llama\bin\llama-cli.exe --model "%MODEL%" -ngl 10 -c 4096 -sys "You are a helpful assistant. Reply in Traditional Chinese." -cnv -t 4
+interpreter --api_base http://127.0.0.1:8080/v1 --model "Gemma-4-Q4_K_M" -y
 
 endlocal
