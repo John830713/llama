@@ -67,7 +67,7 @@ D:\llama\
 ├── README.md              # 專案文件
 ├── update-llama.bat       # 雙擊更新入口
 ├── start-server.bat       # 啟動 server + 列出模型
-├── interpreter.bat        # 互動對話（Gemma-4）
+├── chat.bat               # 互動對話（Gemma-4 via open-interpreter）
 ├── version.txt            # 目前版本 (gitignored)
 ├── bin\                   # llama 二進位 (gitignored)
 ├── resources\             # 專案文件（進 git）

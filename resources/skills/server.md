@@ -23,7 +23,7 @@ D:\llama\bin\llama-server.exe --model "D:\Models\Gemma-4-Q4_K_M.gguf" --host 127
 | bat | 用途 |
 |-----|------|
 | `start-server.bat` | 啟動 server + 列出模型 |
-| `interpreter.bat` | 互動對話（Gemma-4） |
+| `chat.bat` | 互動對話（Gemma-4 via open-interpreter） |
 | `D:\llama_Models.bat` | 啟動 server + Interpreter + 自動排版 |
 
 ## API 用法
