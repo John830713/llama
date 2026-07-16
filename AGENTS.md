@@ -65,16 +65,17 @@ D:\llama\
 ├── AGENTS.md              # 本檔案
 ├── opencode.json          # OpenCode 設定
 ├── README.md              # 專案文件
-├── README.txt             # 快速 cheatsheet
-├── update-llama.ps1       # 更新腳本（根目錄副本）
-├── update-llama.bat       # bat 入口（根目錄副本）
+├── update-llama.bat       # 雙擊更新入口
+├── start-server.bat       # 啟動 server + 列出模型
+├── interpreter.bat        # 互動對話（Gemma-4）
 ├── version.txt            # 目前版本 (gitignored)
 ├── bin\                   # llama 二進位 (gitignored)
-├── Models\                # GGUF 模型 (gitignored)
 ├── resources\             # 專案文件（進 git）
 │   ├── reference/         # 設計參考
 │   ├── skills/            # 操作指引
 │   └── tools/             # 系統工具
+│       ├── common/        # 跨專案通用（ask）
+│       └── local/         # 本機限定（update-llama）
 └── .agent\                # Runtime 資料 (gitignored)
 ```
 
