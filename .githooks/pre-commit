@@ -1,0 +1,10 @@
+@echo off
+setlocal
+
+:: Check if INDEX.md files have been modified without .index.json updates
+git diff --cached --name-only | findstr "INDEX.md" >nul 2>&1
+if %errorlevel%==0 (
+    echo [pre-commit] INDEX.md changed - consider updating .index.json if links changed
+)
+
+endlocal

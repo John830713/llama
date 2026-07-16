@@ -9,15 +9,17 @@ resources/
 ├── INDEX.md              # 本檔案
 ├── reference/            # 設計參考、規格
 │   ├── INDEX.md
-│   └── spec.md           # llama.cpp 參數、模型格式、CUDA 版本
+│   ├── spec.md           # llama.cpp 參數、模型格式、CUDA 版本
+│   ├── server/           # Server 參考
+│   └── models/           # 模型參考
 ├── skills/               # 操作指引
 │   ├── INDEX.md
 │   ├── update.md         # 更新流程
 │   └── server.md         # llama-server 啟動與 API
 └── tools/                # 系統工具
     ├── INDEX.md
-    ├── update-llama.ps1  # 主更新腳本
-    └── update-llama.bat  # bat 入口
+    ├── ask/              # 本地模型 API
+    └── update-llama/     # 更新腳本
 ```
 
 ## 查找
@@ -27,4 +29,5 @@ resources/
 | llama-server 參數怎麼下 | `reference/spec.md` |
 | 怎麼更新到最新版 | `skills/update.md` |
 | 怎麼啟動 server / 用 API | `skills/server.md` |
-| 更新腳本原始碼 | `tools/update-llama.ps1` |
+| 更新腳本原始碼 | `tools/update-llama/` |
+| 本地模型 API 用法 | `tools/ask/` |

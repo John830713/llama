@@ -1,3 +1,4 @@
 bin/
 version.txt
 .agent/
+.opencode/node_modules/
