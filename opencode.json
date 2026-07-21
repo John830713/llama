@@ -3,8 +3,7 @@
   "instructions": [
     "AGENTS.md",
     "README.md",
-    "C:\\Users\\John\\.config/opencode/mneme-memory.md",
-    "結論/總結用繁體中文回答；中間推理過程可用英文；程式碼註解全部用英文。"
+    "~/.config/opencode/mneme-memory.md"
   ],
   "mcp": {
     "mneme": {
