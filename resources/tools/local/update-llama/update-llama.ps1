@@ -14,6 +14,7 @@ try {
     $tag = $release.tag_name
 } catch {
     Write-Warning "GitHub API 限流，無法查詢最新版"
+    if (-not $Dest) { $Dest = "D:\llama" }
     $verFile = Join-Path $Dest "version.txt"
     if (Test-Path $verFile) {
         $tag = (Get-Content $verFile -Raw).Trim()
@@ -28,6 +29,7 @@ try {
 Write-Host "Latest release: $tag"
 
 # 2. 比對版本
+if (-not $Dest) { $Dest = "D:\llama" }
 $verFile = Join-Path $Dest "version.txt"
 if ((Test-Path $verFile) -and (Get-Content $verFile -Raw).Trim() -eq $tag) {
     Write-Host "Already up to date ($tag)"
@@ -35,6 +37,7 @@ if ((Test-Path $verFile) -and (Get-Content $verFile -Raw).Trim() -eq $tag) {
 }
 
 # 3. 準備目錄
+if (-not $ZipDir) { $ZipDir = "D:\Temp\Zip" }
 if (-not (Test-Path $ZipDir)) { New-Item -ItemType Directory -Path $ZipDir -Force | Out-Null }
 
 # 4. 逐一下載
@@ -58,7 +61,9 @@ foreach ($pattern in $assets) {
 }
 
 # 5. 解壓縮
-$binDir = Join-Path $Dest "bin"
+if (-not $Dest) { $Dest = "D:\llama" }
+$binDir = Join-Path -Path $Dest -ChildPath "bin"
+Write-Host "Extracting to: $binDir"
 if (Test-Path $binDir) { Remove-Item $binDir -Recurse -Force }
 
 foreach ($zipPath in $zipPaths) {
